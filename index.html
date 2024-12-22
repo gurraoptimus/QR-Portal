@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wi-Fi QR Code Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #036262aa;
+    }
+    #qr-code {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid none;
+      background: none;
+    }
+    input, select, button {
+      margin: 10px 0;
+      padding: 10px;
+      width: 80%;
+      max-width: 300px;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Wi-Fi QR Code Generator</h1>
+  <input id="ssid" type="text" placeholder="Enter Wi-Fi SSID" required>
+  <input id="password" type="password" placeholder="Enter Wi-Fi Password">
+  <select id="encryption">
+    <option value="WPA">WPA/WPA2</option>
+    <option value="WEP">WEP</option>
+    <option value="">None</option>
+  </select>
+  <button onclick="generateQRCode()">Generate QR Code</button>
+  <div id="qr-code"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script>
+    function generateQRCode() {
+      const ssid = document.getElementById('ssid').value;
+      const password = document.getElementById('password').value;
+      const encryption = document.getElementById('encryption').value;
+
+      if (!ssid) {
+        alert("SSID is required!");
+        return;
+      }
+
+      const wifiData = `WIFI:T:${encryption};S:${ssid};P:${password};;`;
+
+      // Clear previous QR code
+      const qrCodeDiv = document.getElementById('qr-code');
+      qrCodeDiv.innerHTML = '';
+
+      // Generate new QR code
+      QRCode.toCanvas(wifiData, { width: 250 }, function (error, canvas) {
+        if (error) {
+          console.error(error);
+          alert("Failed to generate QR code");
+          return;
+        }
+        qrCodeDiv.appendChild(canvas);
+      });
+    }
+  </script>
+</body>
+</html>
