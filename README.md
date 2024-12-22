@@ -47,8 +47,8 @@
 
 ---
 
-## Demo
-Check out a live demo here: [QR Portal Demo](https://gurraoptimus.github.io/qr-portal/)
+## live
+Check out a live version here: [QR Portal](https://gurraoptimus.github.io/QR-Portal/)
 
 ---
 
