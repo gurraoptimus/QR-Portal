@@ -33,9 +33,8 @@
    ```
 3. Open `index.html` in your browser.
 
-### Option 2: Host Online
-1. Upload the files to any web server or hosting platform.
-2. Share the link with users.
+### Option 2: Share Online
+1. Share the link with users.
 
 ---
 
