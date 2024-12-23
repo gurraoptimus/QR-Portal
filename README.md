@@ -35,7 +35,6 @@
 
 ### Option 2: Share Online
 1. Share the link with users.
-
 ---
 
 ## Built With
