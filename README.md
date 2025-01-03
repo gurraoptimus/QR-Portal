@@ -86,7 +86,8 @@ We welcome contributions! If you'd like to improve this project:
 
 ## Contact
 For questions or feedback, feel free to reach out:
+- **Developer**: Gurraoptimus
 - **Email**: support@gurraoptimus.se
-- **GitHub**: [Gurraoptimus](https://github.com/gurraoptimus)
+- **GitHub**: [sorce code](https://github.dev/gurraoptimus/QR-Portal)
 
 ---

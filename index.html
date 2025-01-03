@@ -54,7 +54,7 @@
 <body>
   <h1>Wi-Fi QR Code Generator</h1>
   <input id="ssid" type="text" placeholder="Enter Wi-Fi SSID" required>
-  <input id="password" type="password" placeholder="Enter Wi-Fi Password">
+  <input id="password" type="password" placeholder="Enter Wi-Fi Password" required>
   <select id="encryption">
     <option value="WPA">WPA/WPA2</option>
     <option value="WEP">WEP</option>
@@ -72,6 +72,11 @@
 
       if (!ssid) {
         alert("SSID is required!");
+        return;
+      }
+
+      if (!password) {
+        alert("password is required!");
         return;
       }
 
