@@ -48,7 +48,7 @@
 
 ## Website or Download
 Check out a live version here: [QR Portal](https://gurraoptimus.github.io/QR-Portal/)<br>
-Download version here: 
+Download version here: Android.
 [![GitHub Download](https://img.shields.io/github/downloads/gurraoptimus/QR-Portal/total?style=flat-square)](https://github.com/gurraoptimus/QR-Portal/tags)
 [![GitHub release](https://img.shields.io/github/v/release/gurraoptimus/QR-Portal?style=flat-square)](https://github.com/gurraoptimus/QR-Portal/tags)
 
