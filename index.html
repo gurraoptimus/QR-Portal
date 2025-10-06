@@ -163,8 +163,6 @@
       });
     }
   </script>
-</body>
-</html>
   <script>
     // Samsung-like boot animation
     window.addEventListener('DOMContentLoaded', () => {
@@ -181,9 +179,9 @@
       else if (ua.includes("Opera") || ua.includes("OPR")) browser = "Opera";
 
       // Detect device type (phone/tablet/desktop)
-      let device = "";
+      let device = "Desktop";
       if (/Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(ua)) {
-        device = "";
+        device = "Mobile";
       } else if (/Tablet|iPad/i.test(ua)) {
         device = "Tablet";
       }
@@ -197,7 +195,10 @@
       else if (/Linux/i.test(ua)) os = "Linux";
 
       boot.innerHTML += '<div style="color:#aaa; font-size:1rem; margin-top:18px; letter-spacing:0.08em; animation: fadeInScale 1.2s 1.1s forwards; opacity:0;">' +
-        browser + '<br><span style="color:#00c3ff;">' + device + ' Device</span></div>';
+        'OS: <span style="color:#00c3ff;">' + os + '</span> ' +
+        'Device: <span style="color:#00c3ff;">' + device + '</span> ' +
+        'Browser: <span style="color:#00c3ff;">' + browser + '</span> ' +
+        '</div>';
       document.body.appendChild(boot);
       setTimeout(() => {
         boot.style.pointerEvents = 'none';
