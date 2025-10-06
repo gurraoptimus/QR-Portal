@@ -26,33 +26,75 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-color: #036262aa;
+      background: linear-gradient(135deg, #036262aa 0%, #00c3ff 100%);
+      animation: bgMove 8s ease-in-out infinite alternate;
+    }
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
     }
     #qr-code {
       margin-top: 20px;
       padding: 10px;
       border: 1px solid none;
       background: none;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 0.6s, transform 0.6s;
+    }
+    #qr-code canvas {
+      animation: fadeInScale 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    @keyframes fadeInScale {
+      from { opacity: 0; transform: scale(0.5); }
+      to { opacity: 1; transform: scale(1); }
     }
     input, select, button {
       margin: 10px 0;
       padding: 10px;
       width: 80%;
       max-width: 300px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      transition: box-shadow 0.3s;
+    }
+    input:focus, select:focus {
+      box-shadow: 0 0 8px #00c3ff;
+      outline: none;
     }
     button {
       background-color: #007BFF;
       color: white;
       border: none;
       cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px #007bff44;
+      transition: background 0.3s, transform 0.2s;
     }
     button:hover {
       background-color: #0056b3;
+      transform: translateY(-2px) scale(1.05);
     }
   </style>
+  <script>
+    // Show QR code with animation
+    const observer = new MutationObserver(() => {
+      const qr = document.getElementById('qr-code');
+      if (qr.children.length) {
+        qr.style.opacity = '1';
+        qr.style.transform = 'scale(1)';
+      } else {
+        qr.style.opacity = '0';
+        qr.style.transform = 'scale(0.8)';
+      }
+    });
+    window.addEventListener('DOMContentLoaded', () => {
+      observer.observe(document.getElementById('qr-code'), { childList: true });
+    });
+  </script>
 </head>
 <body>
-  <img src="https://gurraoptimus.github.io/QR-Portal/screenshots/logotype.svg" alt="QR Portal Logotype" width="120" height="120" style="margin-bottom: 20px;">
+  <img src="https://gurraoptimus.github.io/QR-Portal/screenshots/logotype.svg" alt="QR Portal Logotype" style="width:120px; margin-bottom:20px;">
   <h1>Wi-Fi QR Code Generator</h1>
   <input id="ssid" type="text" placeholder="Enter Wi-Fi SSID" required>
   <input id="password" type="password" placeholder="Enter Wi-Fi Password" required>
@@ -62,8 +104,16 @@
     <option value="">None</option>
   </select>
   <button onclick="generateQRCode()">Generate QR Code</button>
+  <button style="background-color: #6c757d; color: white;" onclick="resetForm()">Reset</button>
+  <script>
+    function resetForm() {
+      document.getElementById('ssid').value = '';
+      document.getElementById('password').value = '';
+      document.getElementById('encryption').selectedIndex = 0;
+      document.getElementById('qr-code').innerHTML = '';
+    }
+  </script>
   <div id="qr-code"></div>
-
   <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
   <script>
     function generateQRCode() {

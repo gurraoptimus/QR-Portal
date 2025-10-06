@@ -28,6 +28,7 @@
 ### Local Usage
 1. Clone the repository:
 2. Go to the project folder:
+3. Open `index.html` in your browser.
 
 ```
 git clone https://github.com/gurraoptimus/qr-portal.git
@@ -36,8 +37,6 @@ git clone https://github.com/gurraoptimus/qr-portal.git
 ```
 cd qr-portal
 ```
-
-3. Open `index.html` in your browser.
 
 ### Online Sharing
 - Share the live link with users.
