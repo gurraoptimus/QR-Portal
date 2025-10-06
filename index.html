@@ -27,6 +27,7 @@
       height: 100vh;
       margin: 0;
       background: linear-gradient(135deg, #036262aa 0%, #00c3ff 100%);
+      background-size: 200% 200%;
       animation: bgMove 8s ease-in-out infinite alternate;
     }
     @keyframes bgMove {
@@ -75,8 +76,50 @@
       background-color: #0056b3;
       transform: translateY(-2px) scale(1.05);
     }
+    /* Samsung-like boot animation overlay */
+    #boot-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #000;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: fadeOutBoot 1s 2.5s forwards;
+    }
+    #boot-logo {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 2.8rem;
+      color: #fff;
+      letter-spacing: 0.15em;
+      font-weight: bold;
+      text-shadow: 0 0 32px #00c3ff, 0 0 8px #fff;
+      opacity: 0;
+      animation: bootLogoFadeIn 1.2s 0.3s forwards;
+    }
+    @keyframes bootLogoFadeIn {
+      from { opacity: 0; transform: scale(0.7);}
+      to { opacity: 1; transform: scale(1);}
+    }
+    @keyframes fadeOutBoot {
+      to { opacity: 0; visibility: hidden; }
+    }
   </style>
   <script>
+    // Samsung-like boot animation
+    window.addEventListener('DOMContentLoaded', () => {
+      const boot = document.createElement('div');
+      boot.id = 'boot-overlay';
+      boot.innerHTML = '<div id="boot-logo" style="text-shadow: 0 0 32px #00c3ff, 0 0 16px #fff, 0 0 48px #00c3ff; animation: bootLogoFadeIn 1.2s 0.3s forwards;">Wi-Fi QR Portal</div>';
+      document.body.appendChild(boot);
+      setTimeout(() => {
+        boot.style.pointerEvents = 'none';
+      }, 2500);
+      // QR code observer
+      observer.observe(document.getElementById('qr-code'), { childList: true });
+    });
+
     // Show QR code with animation
     const observer = new MutationObserver(() => {
       const qr = document.getElementById('qr-code');
@@ -88,14 +131,11 @@
         qr.style.transform = 'scale(0.8)';
       }
     });
-    window.addEventListener('DOMContentLoaded', () => {
-      observer.observe(document.getElementById('qr-code'), { childList: true });
-    });
   </script>
 </head>
 <body>
   <img src="https://gurraoptimus.github.io/QR-Portal/screenshots/logotype.svg" alt="QR Portal Logotype" style="width:120px; margin-bottom:20px;">
-  <h3>Wi-Fi QR Code Generator</h3>
+  <h2>Wi-Fi QR Code Generator</h2>
   <input id="ssid" type="text" placeholder="Enter Wi-Fi SSID" required>
   <input id="password" type="password" placeholder="Enter Wi-Fi Password" required>
   <select id="encryption">
