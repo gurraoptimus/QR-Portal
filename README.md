@@ -50,7 +50,9 @@
 Check out a live version here: [QR Portal](https://gurraoptimus.github.io/QR-Portal/)<br>
 Download the Android version here:
 [![GitHub Download](https://img.shields.io/github/downloads/gurraoptimus/QR-Portal/total?style=flat-square)](https://github.com/gurraoptimus/QR-Portal/release)
-[![GitHub release](https://img.shields.io/github/v/release/gurraoptimus/QR-Portal?style=flat-square)](https://github.com/gurraoptimus/QR-Portal/tags)
+[![GitHub release](https://img.shields.io/github/v/release/gurraoptimus/QR-Portal?style=flat-square)](https://github.com/gurraoptimus/QR-Portal/tags)<br>
+`if you can't install the app!`<br>
+`Make sure you disable security & Blocker!`
 
 ---
 
