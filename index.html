@@ -188,6 +188,14 @@
         device = "Tablet";
       }
 
+      // Detect OS
+      let os = "Unknown OS";
+      if (/Windows NT/i.test(ua)) os = "Windows";
+      else if (/Mac OS X/i.test(ua)) os = "macOS";
+      else if (/Android/i.test(ua)) os = "Android";
+      else if (/iPhone|iPad|iPod/i.test(ua)) os = "iOS";
+      else if (/Linux/i.test(ua)) os = "Linux";
+
       boot.innerHTML += '<div style="color:#aaa; font-size:1rem; margin-top:18px; letter-spacing:0.08em; animation: fadeInScale 1.2s 1.1s forwards; opacity:0;">' +
         browser + '<br><span style="color:#00c3ff;">' + device + ' Device</span></div>';
       document.body.appendChild(boot);
