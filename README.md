@@ -67,9 +67,7 @@ cd qr-portal
 
 ## Screenshots
 <p align="center">
-    <b>Home Page</b><br>
     <img src="screenshots/homepage.png" alt="Screenshot of the QR Portal homepage" width="350" /><br><br>
-    <b>Generated QR Code</b><br>
     <img src="screenshots/qr-code.png" alt="Screenshot of a generated Wi-Fi QR code" width="220" />
 </p>
 
