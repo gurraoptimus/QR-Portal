@@ -1,98 +1,106 @@
-# QR Portal
-
-**QR Portal** is a simple and efficient web-based tool for generating Wi-Fi QR codes. It allows users to quickly create a QR code for their Wi-Fi network, enabling seamless connectivity by scanning the code with a mobile device.
+<p align="center">
+    <img src="https://gurraoptimus.github.io/QR-Portal/screenshots/logotype.png" alt="QR Portal Logotype" width="" />
+</p>
+    <b>QR Portal</b> is a streamlined web tool for generating Wi-Fi QR codes.<br>
+    Instantly create a QR code for your network and connect devices with a simple scan.
+</p>
 
 ---
 
 ## Features
-- Enter Wi-Fi credentials (SSID, Password, and Encryption type).
-- Generate a QR code instantly.
-- Responsive design for all devices.
-- Easy-to-use interface.
+- Input Wi-Fi credentials (SSID, password, encryption type)
+- Instant QR code generation
+- Responsive design for all devices
+- User-friendly interface
 
 ---
 
 ## How to Use
-1. Open the `QR Portal` webpage.
+1. Open the QR Portal webpage.
 2. Enter your Wi-Fi network name (SSID) and password.
-3. Select the encryption type (WPA/WPA2, WEP, or None).
-4. Click on the **Generate QR Code** button.
-5. Scan the generated QR code with your smartphone to connect to the Wi-Fi network.
+3. Choose the encryption type (WPA/WPA2, WEP, or None).
+4. Click **Generate QR Code**.
+5. Scan the QR code with your smartphone to connect.
 
 ---
 
 ## Setup
-### Option 1: Use Locally
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/gurraoptimus/qr-portal.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd qr-portal
-   ```
+### Local Usage
+1. Clone the repository:
+2. Go to the project folder:
+
+```
+git clone https://github.com/gurraoptimus/qr-portal.git
+```
+
+```
+cd qr-portal
+```
+
 3. Open `index.html` in your browser.
 
-### Option 2: Share Online
-1. Share the link with users.
+### Online Sharing
+- Share the live link with users.
 
 ---
 
 ## Built With
-- **HTML5**: Structure and layout.
-- **CSS3**: Styling and responsive design.
-- **JavaScript**: Logic for QR code generation.
-- [qrcode.js](https://github.com/soldair/node-qrcode): JavaScript library for generating QR codes.
+- **HTML5**: Structure
+- **CSS3**: Styling & responsiveness
+- **JavaScript**: QR code logic
+- [qrcode.js](https://github.com/soldair/node-qrcode): QR code generation library
 
----
-
-## Website or Download
-Check out a live version here: [QR Portal](https://gurraoptimus.github.io/QR-Portal/)<br>
-Download the Android version here:
-[![GitHub Download](https://img.shields.io/github/downloads/gurraoptimus/QR-Portal/total?style=flat-square)](https://github.com/gurraoptimus/QR-Portal/releases)
-[![GitHub release](https://img.shields.io/github/v/release/gurraoptimus/QR-Portal?style=flat-square)](https://github.com/gurraoptimus/QR-Portal/tags)<br>
-`if you can't install the app!`<br>
-`Make sure you disable security & Blocker!`
+<p align="center">
+    <img src="https://raw.githubusercontent.com/gurraoptimus/QR-Portal/refs/heads/main/screenshots/favicon.ico" alt="QR Portal App Logotype" width="120" /><br>
+    <a href="https://gurraoptimus.github.io/QR-Portal/">Try the live version: QR Portal</a><br>
+    Download the Android app:<br>
+    <a href="https://github.com/gurraoptimus/QR-Portal/releases">
+        <img src="https://img.shields.io/github/downloads/gurraoptimus/QR-Portal/total?style=flat-square" alt="GitHub Download" />
+    </a>
+    <a href="https://github.com/gurraoptimus/QR-Portal/tags">
+        <img src="https://img.shields.io/github/v/release/gurraoptimus/QR-Portal?style=flat-square" alt="GitHub release" />
+    </a><br>
+    <code>If you can't install the app, disable security & blockers.</code>
+</p>
 
 ---
 
 ## Screenshots
-### Home Page:
-![Screenshot of the QR Portal homepage](screenshots/homepage.png)
-
-### Generated QR Code:
-![Screenshot of a generated Wi-Fi QR code](screenshots/qr-code.png)
-
----
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+<p align="center">
+    <b>Home Page</b><br>
+    <img src="screenshots/homepage.png" alt="Screenshot of the QR Portal homepage" width="350" /><br><br>
+    <b>Generated QR Code</b><br>
+    <img src="screenshots/qr-code.png" alt="Screenshot of a generated Wi-Fi QR code" width="220" />
+</p>
 
 ---
 
 ## Contributing
-We welcome contributions! If you'd like to improve this project:
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Make your changes and commit:
-   ```bash
-   git commit -m "Add your message here"
-   ```
-4. Push to your branch:
-   ```bash
-   git push origin feature-name
-   ```
-5. Submit a pull request.
+Contributions are welcome!
+1. Fork the repo.
+2. Create a branch:
+        ```bash
+        git checkout -b feature-name
+        ```
+3. Commit your changes:
+        ```bash
+        git commit -m "Describe your changes"
+        ```
+4. Push your branch:
+        ```bash
+        git push origin feature-name
+        ```
+5. Open a pull request.
 
 ---
 
 ## Contact
-For questions or feedback, feel free to reach out:
+Questions or feedback? Reach out:
 - **Developer**: Gurraoptimus
 - **Email**: support@gurraoptimus.se
-- **GitHub**: [sorce code](https://github.dev/gurraoptimus/QR-Portal)
+- **GitHub**: [Source code](https://github.dev/gurraoptimus/QR-Portal)
+
+## License
+Licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
