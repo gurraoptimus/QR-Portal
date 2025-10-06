@@ -1,0 +1,9 @@
+<svg width="240" height="60" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+    <rect width="240" height="60" rx="12" fill="#22223B"/>
+    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
+                font-family="Segoe UI, Arial, sans-serif" font-size="32" fill="#F2E9E4" font-weight="bold">
+        QR Portal
+    </text>
+    <rect x="20" y="15" width="30" height="30" rx="6" fill="#4A4E69"/>
+    <rect x="28" y="23" width="14" height="14" rx="2" fill="#9A8C98"/>
+</svg>
