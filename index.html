@@ -181,7 +181,7 @@
       else if (ua.includes("Opera") || ua.includes("OPR")) browser = "Opera";
 
       // Detect device type (phone/tablet/desktop)
-      let device = "Desktop";
+      let device = "";
       if (/Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(ua)) {
         device = "";
       } else if (/Tablet|iPad/i.test(ua)) {
