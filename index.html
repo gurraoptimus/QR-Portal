@@ -171,7 +171,17 @@
       const boot = document.createElement('div');
       boot.id = 'boot-overlay';
       boot.innerHTML = '<div id="boot-logo" style="text-shadow: 0 0 32px #00c3ff, 0 0 16px #fff, 0 0 48px #00c3ff; animation: bootLogoFadeIn 1.2s 0.3s forwards;">Wi-Fi QR Portal</div>';
-      boot.innerHTML += '<div style="color:#aaa; font-size:1rem; margin-top:18px; letter-spacing:0.08em; animation: fadeInScale 1.2s 1.1s forwards; opacity:0;">' + navigator.userAgent + '</div>';
+      // Detect browser name (simple check)
+      let browser = "Unknown";
+      const ua = navigator.userAgent;
+      if (ua.includes("Chrome")) browser = "Chrome";
+      else if (ua.includes("Firefox")) browser = "Firefox";
+      else if (ua.includes("Safari") && !ua.includes("Chrome")) browser = "Safari";
+      else if (ua.includes("Edge")) browser = "Edge";
+      else if (ua.includes("Opera") || ua.includes("OPR")) browser = "Opera";
+
+      boot.innerHTML += '<div style="color:#aaa; font-size:1rem; margin-top:18px; letter-spacing:0.08em; animation: fadeInScale 1.2s 1.1s forwards; opacity:0;">' +
+        browser + '<br><span style="color:#00c3ff;">your browser Device</span></div>';
       document.body.appendChild(boot);
       setTimeout(() => {
         boot.style.pointerEvents = 'none';
